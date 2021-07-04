@@ -1,13 +1,12 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2021-04-13 11:10:34 +0530
-categories: old deep small
-related_image: "/assets/postimage.jpg"
+title: Welcome to Jekyll!
+date: 2021-04-13 12:42:00 +0530
+categories: Jekyll
+related_image: assets/files/postimage.jpg
 excerpt: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes.
 featured: 1
-hidden: true
-tags: old test big
+tags: old test big 
 ---
 ![My helpful screenshot](/assets/screenshot.jpg)
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.

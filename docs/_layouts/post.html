@@ -19,6 +19,9 @@ layout: default
     </header>
 
     <div class="post-content e-content" itemprop="articleBody">
+      {% if page.related_image %}
+        <img src="/{{ page.related_image }}">
+      {% endif %}
       {{ content }}
     </div>
 
