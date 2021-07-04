@@ -1,0 +1,78 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  {%- if site.posts.size > 0 -%}
+  <h2 class="post-list-heading">{{ page.list_title | default: "Featured" }}</h2>
+
+  {%- for post in site.posts -%}
+  {%- if post.featured > 1 -%}
+
+  <a href="{{ post.url }}">
+    <div class="cover-post">
+      {% if post.related_image %}
+      <img src="{{ post.related_image }}" alt="">
+      {% endif %}
+
+      <a class="cover-post-head" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+      <p class="cover-post-desc">{{ post.excerpt }}</p>
+
+    </div>
+    {%- endif %}
+    {%- endfor -%}
+  </a>
+  <ul class="post-list">
+    {%- for post in site.posts -%}
+    {%- if post.featured > 0 -%}
+    {%- if post.featured < 2 -%}
+    <li>
+        <a href="{{ post.url }}">
+        {% if post.related_image %}
+        <div style="background-image: url({{ post.related_image }});" class="grid-post-image"></div>
+        {% endif %}
+
+        <a class="grid-post-head" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        <p>{{ post.excerpt }}</p>
+      </a>
+    </li>
+    {%- endif %}
+    {%- endif %}
+    {%- endfor -%}
+  </ul>
+  <h2 class="post-list-heading">{{ page.list_title | default: "Latest" }}</h2>
+  <ul class="post-list">
+    {%- for post in paginator.posts -%}
+    {%- if post.featured < 1 -%} <li>
+      {% if post.related_image %}
+      <img src="{{ post.related_image }}" alt="">
+      {% endif %}
+
+      <a class="grid-post-head" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+      <p>{{ post.excerpt }}</p>
+      </li>
+      {%- endif %}
+      {%- endfor -%}
+  </ul>
+  <p class="rss-subscribe">subscribe <a href="{{ " /feed.xml" | relative_url }}">via RSS</a></p>
+  {%- endif -%}
+<!-- Pagination links -->
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous">
+      Previous
+    </a>
+  {% else %}
+    <span class="previous">Previous</span>
+  {% endif %}
+  <span class="page_number ">
+    Page: {{ paginator.page }} of {{ paginator.total_pages }}
+  </span>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+  {% else %}
+    <span class="next ">Next</span>
+  {% endif %}
+</div>
+</div>

@@ -1,0 +1,74 @@
+---
+layout: default
+---
+
+<div class="home">
+  {%- if page.title -%}
+  <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+  {%- if site.posts.size > 0 -%}
+  <h2 class="post-list-heading">{{ page.list_title | default: "Featured" }}</h2>
+
+  {%- for post in site.posts -%}
+  {%- if post.featured > 1 -%}
+
+  <a href="{{ post.url }}">
+    <div class="cover-post">
+      {% if post.related_image %}
+      <img src="{{ post.related_image }}" alt="">
+      {% endif %}
+
+      <a class="cover-post-head" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+      <p class="cover-post-desc">{{ post.excerpt }}</p>
+
+    </div>
+    {%- endif %}
+    {%- endfor -%}
+  </a>
+  <ul class="feat-post-list">
+    {%- for post in site.posts -%}
+    {%- if post.featured > 0 -%}
+    {%- if post.featured < 2 -%} <li>
+      <a href="{{ post.url }}">
+        {% if post.related_image %}
+        <div style="background-image: url({{ post.related_image }});" class="feat-post-image"></div>
+        {% endif %}
+
+        <a class="grid-post-head" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        <p>{{ post.excerpt }}</p>
+      </a>
+      </li>
+      {%- endif %}
+      {%- endif %}
+      {%- endfor -%}
+  </ul>
+  <h2 class="post-list-heading">{{ page.list_title | default: "Latest" }}</h2>
+  <ul class="post-list">
+    {% for post in site.posts %}
+
+      {% if forloop.index <= 12 %}
+        {% if post.featured < 1 %} <li>
+          <a href="{{ post.url }}">
+          {% if post.related_image %}
+            <div style="background-image: url({{ post.related_image }});" class="grid-post-image"></div>
+          {% endif %}
+
+          <a class="grid-post-head" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+          <p>{{ post.excerpt }}</p>
+        </a>
+          </li>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </ul>
+  {%- if site.posts.size > 11 -%}
+  <div style="text-align: center;">
+    <a class="button-link" href="/page/2">View More</a>
+  </div>
+  {%- endif -%}
+  {%- endif -%}
+</div>
+  </div>

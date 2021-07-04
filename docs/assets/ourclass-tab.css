@@ -1,0 +1,444 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+}
+h1 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 3em;
+}
+h2 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 2em;
+}
+h3 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.5em;
+}
+body a {
+  color: #5a5d64;
+  text-decoration: none;
+}
+body a:hover {
+  color: #f85759;
+}
+.top-nav {
+  height: 64px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-color: white;
+}
+.nav-items {
+  display: none;
+}
+.logo img {
+  height: 30px;
+}
+.logo {
+  padding-top: 25px;
+  width: 50%;
+  display: inline-block;
+}
+.logo span{
+  display: inline-block;font-size: 1.5em;position:absolute; width: fit-content;
+  width: -moz-fit-content;
+  padding-left: 20px;
+  }
+.hamburger {
+  z-index: 12;
+  cursor: pointer;
+}
+.menu-button {
+  height: 30px;
+  padding: 5px;
+  margin-left: 8px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.dimmer {
+  background-color: rgba(0, 0, 0, 0.76);
+  width: 100%;
+  display: block;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 0;
+  transition: opacity 0.5s ease-in-out;
+
+  z-index: 6;
+}
+.side-nav:hover {
+  transition: left 0s;
+}
+.side-nav {
+  display: block;
+  width: 70vw;
+  height: 100%;
+  position: fixed;
+  left: -70vw;
+  top: 0;
+  z-index: 0;
+  opacity: 0;
+  background-color: white;
+  transition: left 0.5s ease-in-out;
+  overflow: scroll;
+}
+.nav-logo {
+  position: relative;
+  height: 30px;
+  left: 10px;
+  margin-top: 17px;
+  background-color: transparent;
+}
+.side-nav ul {
+  margin-top: 2vh;
+  margin-left: 0;
+  padding-left: 0;
+}
+.side-nav li {
+  list-style: none;
+  margin-top: 4vh;
+  font-weight: bold;
+  font-size: 5vw;
+  font-family: "Roboto", sans-serif;
+}
+.side-nav li > a {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+.side-links {
+  color: rgb(34, 45, 49);
+  margin-left: 10%;
+}
+.reg-button {
+  height: 4vh;
+  border-radius: 1vh;
+  display: block;
+  background-color: rgb(70, 230, 188);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.login-button {
+  text-decoration: none;
+  color: rgb(70, 230, 188);
+  border: 2px solid rgb(70, 230, 188);
+  padding: 10px;
+  display: block;
+  width: 80%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.side-nav hr {
+  height: 0.5px;
+  opacity: 0.2;
+}
+.quick-link {
+  display: block;
+  margin-right: 15px;
+}
+#nav-close {
+  text-decoration: none;
+  font-family: "Ropa Sans", sans-serif;
+  font-size: large;
+  float: right;
+  margin-top: 2vh;
+  margin-right: 10px;
+}
+
+.main-cont {
+  display: block;
+  text-align: center;
+  line-height: 1.5;
+}
+.home-row {
+  padding-top: 20px;
+  text-align: center;
+}
+#home-image {
+  height: 200px;
+}
+.footer {
+  padding-top: 20px;
+  height: 100px;
+  display: block;
+}
+.footer a {
+  padding-left: 10px;
+}
+.social {
+  padding-top: 20px;
+  padding-left: 10px;
+}
+.social a {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.social a:hover {
+  opacity: 1;
+}
+.attribute a {
+  color: rgb(70, 230, 188);
+}
+.attribute a:visited {
+  color: #f8ffbc;
+}
+.social a {
+  width: 1vw;
+  padding: 0.2vw;
+  padding-bottom: 0px;
+  margin-left: 0.9vw;
+  background-color: #ebebeb;
+  border-radius: 0.5vw;
+  color: rgb(32, 32, 32);
+  text-decoration: none;
+}
+.social a:focus > img {
+  box-shadow: blue;
+}
+.legal {
+  font-size: small;
+  display: inline;
+  padding-left: 10px;
+}
+.copyright {
+  font-size: small;
+  padding: 10px;
+}
+
+/*{{}} Ourclasshome.html*/
+#home-home-row h2 {
+  font-family: "Roboto", sans-serif;
+}
+
+#home-home-row {
+}
+
+.articles {
+  width: 100%;
+  padding-top: 30px;
+  background-color: #f85759;
+  line-height: normal;
+  margin-top: -3px;
+}
+
+.article-card {
+  margin-top: 20px;
+  width: 90%;
+  display: inline-block;
+  text-align: left;
+  background-color: white;
+  border-radius: 5px;
+  border: 2px solid #adeffe;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.article-card a {
+  font-size: 1.1em;
+}
+.article-card a strong {
+  transition: linear 100ms;
+}
+.article-card a:hover strong {
+  margin-left: 5px;
+}
+.article-img {
+  width: 100%;
+  height: 200px;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+#home-home-row .image {
+  background-image: url("../assets/ourclass-home-back1-mob.svg");
+  background-size: 100% 140%;
+  background-position: center bottom;
+}
+.text {
+  margin-top: 50px;
+  line-height: 1.5;
+}
+.points-l {
+  display: block;
+  padding: 5%;
+  text-align: left;
+  background-image: url("../assets/ourclass-home-back3-mob.svg");
+  background-size: 100% 100%;
+  background-position: center bottom;
+  margin-top: -3px;
+}
+.points-r {
+  display: block;
+  padding: 5%;
+  text-align: left;
+  background-image: url("../assets/ourclass-home-back2-mob.svg");
+  background-size: 100% 100%;
+  background-position: center bottom;
+  margin-top: -3px;
+}
+.article-text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.cont-row img {
+  width: 100%;
+}
+/*End of ourclasshome.html*/
+
+/*{{}}about.html*/
+#about-home-row {
+  background-image: url("../assets/about-home-back1.svg");
+  background-size: 150% 100%;
+  background-position: bottom center;
+  padding-bottom: 50px;
+}
+#cont1 {
+  background-image: url("../assets/about-home-back2-mob.svg");
+  background-size: 100% 100%;
+  padding: 10% 10% 10% 10%;
+  box-sizing: border-box;
+  color: rgb(255, 194, 194);
+}
+#cont2 {
+  padding: 10% 10% 10% 10%;
+  box-sizing: border-box;
+  color: black;
+  background-image: url("../assets/about-home-backw-mob.svg");
+  background-size: 100% 100%;
+}
+#cont2 h2 {
+  color: #f85759;
+}
+.cont-text {
+  font-size: 1.2em;
+  line-height: 2;
+  text-align: left;
+}
+.cont-row {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cont-text {
+  font-size: 1.2em;
+  line-height: 2;
+  text-align: justify;
+}
+.about-desk-head-img {
+  display: none;
+}
+.about-mob-head-img {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+/*End of about.html*/
+
+/*{{}}Privacy.html*/
+.priv-content {
+  text-align: left;
+  width: 90%;
+  display: inline-block;
+  scroll-padding: 50px 0 0 50px;
+}
+
+.priv-index {
+  padding: 10px;
+  text-align: left;
+}
+.priv-index ul {
+  line-height: 2;
+  font-size: 0.8em;
+}
+.priv-index ul > li {
+  list-style: none;
+}
+.priv-index a {
+  text-decoration: none;
+  color: rgb(139, 139, 139);
+}
+.priv-content h3::before {
+  display: block;
+  content: " ";
+  margin-top: -70px;
+  height: 70px;
+  visibility: hidden;
+  pointer-events: none;
+}
+/*end of privacy*/
+
+@font-face {
+  font-family: "icomoon";
+  src: url("fonts/icomoon.eot?jvwcle");
+  src: url("fonts/icomoon.eot?jvwcle#iefix") format("embedded-opentype"),
+    url("fonts/icomoon.ttf?jvwcle") format("truetype"),
+    url("fonts/icomoon.woff?jvwcle") format("woff"),
+    url("fonts/icomoon.svg?jvwcle#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-active:before {
+  content: "\e900";
+}
+.icon-dormant:before {
+  content: "\e901";
+}
+.icon-whatsapp:before {
+  content: "\e907";
+}
+.icon-facebook:before {
+  content: "\e908";
+}
+.icon-instagram:before {
+  content: "\e909";
+}
+.icon-profile:before {
+  content: "\e90a";
+}
+.icon-purchases:before {
+  content: "\e90b";
+}
+.icon-telegram:before {
+  content: "\e90c";
+}
+.icon-phone:before {
+  content: "\e90d";
+}
+.icon-at-the-rate:before {
+  content: "\e90e";
+}
+.icon-logout:before {
+  content: "\e90f";
+}
+.icon-settings:before {
+  content: "\e910";
+}
+.icon-down-doc:before {
+  content: "\e911";
+}

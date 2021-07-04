@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<div class="home">
+    <div id="search-count"><span id="s-n">0</span> result<span id="pl">s</span> found for <span id="s-k"></span></div>
+<ul class="post-list" id="search-results">
+
+</ul>
+<div id="result-pages" class="pagination">
+  <a href="javascript:;" id="first-page" class="first">First</a>
+  <a href="javascript:;" id="prev-page"></a>
+  <span id="curr-page"></span>
+  <a href="javascript:;" id="next-page"></a>
+  <a href="javascript:;" id="last-page" class="last">Last</a>
+</div>
+</div>
+<script>
+   var documents = [
+    {% for post in site.posts %}
+    {
+        "title": "{{ post.title | xml_escape }}",
+        "image": "{{ post.related_image | xml_escape }}",
+        "content": {{ post.content | strip_html | strip_newlines | jsonify }},
+        "excerpt": {{ post.excerpt | strip_html | strip_newlines | jsonify }},
+        "url": "{{ post.url | xml_escape }}"
+      }
+      {% unless forloop.last %},{% endunless %}
+    {% endfor %}
+    ]
+</script>
+<script src="/assets/lunr.js"></script>
+<script src="/assets/search.js"></script>

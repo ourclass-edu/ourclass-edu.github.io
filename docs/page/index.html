@@ -1,0 +1,65 @@
+---
+layout: default
+---
+
+{% if paginator.page > 1 %}
+<div class="home">
+  <ul class="post-list">
+
+    {% for post in paginator.posts %}
+
+    {% if post.featured < 1 %} <li>
+      {% if post.related_image %}
+      <div style="background-image: url({{ post.related_image }});" class="grid-post-image"></div>
+      {% endif %}
+      <a class="grid-post-head" href="{{ post.url }}">{{ post.title }}</a>
+      <p>{{ post.excerpt }}</p>
+      </li>
+      {% endif %}
+      {% endfor %}
+  </ul>
+  <!-- Pagination links -->
+
+  <div class="pagination">
+
+    {% if paginator.previous_page %}
+
+      {% if paginator.previous_page > 1 %}
+        <a href="/page/" class="first">First</a>
+      {% else %}
+        <a class="first" style="opacity: 0;">First</a>
+      {% endif %}
+      <a href="{{ paginator.previous_page_path }}" class="previous">{{ paginator.previous_page }}</a>
+    {% else %}
+    <a class="first" style="opacity: 0;">First</a>
+      <a class="previous" style="opacity: 0;">0</a>
+    {% endif %}
+
+
+    <span class="page_number ">{{ paginator.page }}</span>
+
+
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path }}" class="next">{{ paginator.next_page }}</a>
+
+
+      {% if paginator.next_page < paginator.total_pages %} 
+        <a href="/page/{{paginator.total_pages}}" class="last">Last</a>
+      {% else %}
+        <a class="first" style="opacity: 0;">Last</a>
+      {% endif %}
+
+    {% else %}
+      <a class="previous" style="opacity: 0;">
+        0
+      </a>
+      <a class="first" style="opacity: 0;">Last</a>
+    {% endif %}
+
+
+  </div>
+
+</div>
+{% else %}
+<script>window.location = "/"</script>
+{% endif %}

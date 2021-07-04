@@ -1,0 +1,43 @@
+<header class="site-header" role="banner">
+    <nav class="side-nav" id="side-nav">
+        <img src="/assets/ourclass_branding.svg" class="nav-logo" alt="ourclass" aria-label="Ourclass logo">
+        <a href="javascript:;" onclick="hideNav()" id="nav-close" aria-label="close navigation drawer">✕</a>
+        <hr>
+        <ul>
+            <li><a href="https://ourclass-edu.web.app/quizpanda" onclick="hideNav();" class="side-links">Quiz Panda</a>
+            </li>
+            <li><a href="https://ourclass-edu.web.app/about" class="side-links">Know Us</a></li>
+            <li><a href="/feed.xml" class="side-links" title="Rss Feed" target="_blank">Rss Feed <i class="icon-rss" style="margin-left: 10px;"></i></a></li>
+            <li><a href="/subscribe" target="_blank" class="side-links" id="subs-link-side">Subscribe</a>
+        </ul>
+    </nav>
+    <div class="dimmer" id="dimmer"></div>
+    <nav class="top-nav">
+        <a onclick="showNav();" class="hamburger"><img src="/assets/sandwich.svg" alt="≡" class="menu-button"
+                aria-label="Hamburger menu" id="menu-button"></a>
+        <div class="logo">
+            <a href="https://ourclass-edu.web.app"><img src="/assets/ourclass_branding.svg"></a>
+            <a href="/"><span id="blog-name">Learningspace</span></a>
+        </div>
+        <div class="nav-items">
+            <a href="javascript:;" id="search-show"><i class="icon-search" title="Search"></i></a>
+            <a href="https://ourclass-edu.web.app/quizpanda">Quiz Panda</a>
+            <a href="https://ourclass-edu.web.app/about">Know Us</a>
+            <a href="/feed.xml" style="padding: 0px 10px 0px 20px" title="Rss Feed" target="_blank"><i class="icon-rss"></i></a>
+            <a href="/subscribe" id="subs-link" target="_blank">Subscribe</a>
+        </div>
+    </nav>
+    <div class="search-nav" id="search-nav">
+        <a onclick="showNav();" class="hamburger"><img src="/assets/sandwich.svg" alt="≡" class="menu-button"
+                aria-label="Hamburger menu" id="menu-button"></a>
+        <div class="logo">
+            <a href="https://ourclass-edu.web.app"><img src="/assets/ourclass_branding.svg"></a>
+            <a href="/"><span id="blog-name">Learningspace</span></a>
+        </div>
+        <div id="search-bar">
+            <input type="text" placeholder="Search..." id="search-input">
+            <a href="javascript:;" id="search-button"><i class="icon-search" title="Search"></i></a>
+            <a href="javascript:;" id="cancel-search">✕</a>
+        </div>
+    </div>
+</header>

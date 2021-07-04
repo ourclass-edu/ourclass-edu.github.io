@@ -1,0 +1,85 @@
+---
+layout: default
+---
+<div class="post-cont">
+  <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <header class="post-header">
+      <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+      <p class="post-meta">
+        <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+          {{ page.date | date: date_format }}
+        </time>
+        {%- if page.author -%}
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card"
+            itemprop="name">{{ page.author }}</span></span>
+        {%- endif -%}
+      </p>
+    </header>
+
+    <div class="post-content e-content" itemprop="articleBody">
+      {{ content }}
+    </div>
+
+    {%- if site.disqus.shortname -%}
+    {%- include disqus_comments.html -%}
+    {%- endif -%}
+
+    <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+
+    <div class="subs-foot">
+      <hr style="margin-bottom: 20px;">
+      <h2>Subscribe to our Newsletter</h2>
+      <p>Get the latest from Ourclass delivered to your inbox</p>
+      <div>
+        <input type="email" id="subs-email" placeholder="Type your email address.">
+        <button id="subs-button">Subscribe!</button>
+      </div>
+      <p style="margin-top: 10px;">By subscribing, you agree to our <a href="https://ourclass-edu.web.app/terms">Terms and Conditions</a> and <a
+          href="https://ourclass-edu.web.app/privacy">Privacy Policy</a>.</p>
+      <hr style="margin-top: 20px;">
+    </div>
+  </article>
+  <div class="related">
+
+    <h4>Related Posts</h4>
+
+    {% assign maxRelated = 4 %}
+    {% assign minCommonTags = 2 %}
+    {% assign maxRelatedCounter = 0 %}
+
+    {% for post in site.posts %}
+
+    {% assign sameTagCount = 0 %}
+    {% assign commonTags = '' %}
+
+    {% for tag in post.tags %}
+    {% if post.url != page.url %}
+    {% if page.tags contains tag %}
+    {% assign sameTagCount = sameTagCount | plus: 1 %}
+    {% capture tagmarkup %} <span class="label label-default">{{ tag }}</span> {% endcapture %}
+    {% assign commonTags = commonTags | append: tagmarkup %}
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+
+    {% if sameTagCount >= minCommonTags %}
+    <ul class="related-posts">
+      <li>
+
+        {% if post.related_image %}
+        <div style="background-image: url({{ post.related_image }});" class="grid-post-image"></div>
+        {% endif %}
+        <a class="grid-post-head" href="{{ post.url }}">{{ post.title }}</a>
+        <p>{{ post.excerpt }}</p>
+      </li>
+    </ul>
+    {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+    {% if maxRelatedCounter >= maxRelated %}
+    {% break %}
+    {% endif %}
+    {% endif %}
+
+    {% endfor %}
+  </div>
