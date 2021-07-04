@@ -5,7 +5,7 @@ date: 2021-03-16 03:22:00 +0530
 categories: NTA NET
 related_image: assets/files/art2.svg
 excerpt: Hello future professors, Greetings from Ourclass! In this blog, we will share with you 10 tips to score higher marks in UGC NET Paper I.
-featured: 2
+featured: 0
 tags: nta-net exam tips 
 ---
 ![head-image](/assets/art2.svg)
