@@ -65,6 +65,9 @@ function hideSearch() {
 function search()
 {
     const keywords = $('search-input').value;
+    if(keywords && keywords.length >0)
+    {
         $('search-input').value = ""
         window.location = "/search?keys=" + keywords
+    }
 }
