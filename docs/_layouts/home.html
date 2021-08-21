@@ -18,7 +18,7 @@ layout: default
   <a href="{{ post.url }}">
     <div class="cover-post">
       {% if post.related_image %}
-      <img src="{{ post.related_image }}" alt="">
+      <div style="background-image: url({{ post.related_image }});" class="cover-post-image"></div>
       {% endif %}
 
       <a class="cover-post-head" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
