@@ -31,11 +31,14 @@ function searchNow() {
     results = idx.search(searchString)
     // method (return element > 0). 
     $('s-n').textContent = results.length
+    console.log("Number of result ",results.length)
     if (results.length === 1) {
         $('pl').textContent = ""
     }
     else if (results.length === 0) {
-        $('s-n').textContent = No
+        $('s-n').textContent = "No"
+        $('s-n').style.fontWeight = "initial"
+        $('s-n').style.fontSize = "inherit"
         $('pl').textContent = "s"
         $('result-pages').style.display = "none"
     }
