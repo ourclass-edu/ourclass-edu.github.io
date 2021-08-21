@@ -37,6 +37,7 @@ function searchNow() {
     else if (results.length === 0) {
         $('s-n').textContent = No
         $('pl').textContent = "s"
+        $('result-pages').style.display = "none"
     }
     else{
         $('pl').textContent = "s"
