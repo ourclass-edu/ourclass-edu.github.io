@@ -27,7 +27,7 @@ $content-width: 100% !default;
 
 $on-palm: 1024 !default;
 $on-laptop: 1025 !default;
-$on-mobile: 500
+
 // Use media queries like this:
 // @include media-query($on-palm) {
 //   .wrapper {
@@ -62,6 +62,59 @@ h4 {
   font-family: 'Quicksand',sans-serif;
 }
 
+.cover-post{
+  
+  box-shadow: 0px 0px 5px 0px black;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+.cover-post-image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+}
+.cover-post-head{
+
+  font-family: "Quicksand", sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+}
+.cover-post-desc{
+  font-size: 1.5em;
+}
+.grid-post-head {
+
+  font-family: "Quicksand", sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.grid-post-image {
+  height: 200px;
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.feat-post-image {
+  height: 300px;
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.cover-post-image {
+  height: 600px;
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 #blog-name {
   font-family: "Quicksand", sans-serif;
   color: #419d78;
