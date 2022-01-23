@@ -27,7 +27,7 @@ $content-width: 100% !default;
 
 $on-palm: 1024 !default;
 $on-laptop: 1025 !default;
-
+$on-mobile: 500 !default;
 // Use media queries like this:
 // @include media-query($on-palm) {
 //   .wrapper {
@@ -95,21 +95,23 @@ h4 {
   font-weight: bold;
 }
 .grid-post-image {
-  height: 200px;
+  height: $on-laptop / 200;
   width: 100%;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .feat-post-image {
-  height: 300px;
+  height: $on-laptop / 300;
+  height: $on-mobile / 200;
   width: 100%;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .cover-post-image {
-  height: 600px;
+  height: $on-laptop / 600;
+  height: $on-mobile / 300;
   width: 100%;
   background-position: center center;
   background-repeat: no-repeat;
