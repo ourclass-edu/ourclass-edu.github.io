@@ -23,7 +23,6 @@ layout: default
 
       <a class="cover-post-head" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
       <p class="cover-post-desc">{{ post.excerpt }}</p>
-
     </div>
     {%- endif %}
     {%- endfor -%}
@@ -39,6 +38,7 @@ layout: default
 
         <a class="grid-post-head" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
         <p>{{ post.excerpt }}</p>
+        <div class="post-list-fade-out"></div>
       </a>
       </li>
       {%- endif %}
@@ -49,7 +49,7 @@ layout: default
   <ul class="post-list">
     {% for post in site.posts %}
 
-      {% if forloop.index <= 12 %}
+      {% if forloop.index <= 9 %}
         {% if post.featured < 1 %} <li>
           <a href="{{ post.url }}">
           {% if post.related_image %}
@@ -58,6 +58,9 @@ layout: default
 
           <a class="grid-post-head" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
           <p>{{ post.excerpt }}</p>
+
+          <div class="post-list-fade-out"></div>
+
         </a>
           </li>
         {% endif %}

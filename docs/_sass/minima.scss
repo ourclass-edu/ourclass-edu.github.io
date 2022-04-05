@@ -360,11 +360,25 @@ line-height: 3;
     display: inline-block;
     width: calc(33% - 35px);
     vertical-align: text-top;
+    height: 320px;
+    overflow: hidden;
+    position: relative;
+  }
+  .post-list-fade-out{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    background-image: linear-gradient(transparent, white);
+    box-sizing: border-box;
   }
   .feat-post-list > li{
     display: inline-block;
     width: calc(50% - 35px);
     vertical-align: text-top;
+    height: 420px; 
+    position: relative;
+    overflow: hidden;
   }
   .post-list p{
     font-size: 14px;
@@ -373,7 +387,7 @@ line-height: 3;
     font-size: 16px;
   }
 
-.cover-post{ padding: 20px; } 
+.cover-post{ padding: 20px;} 
 .grid-post-image { height: 200px; } 
 .feat-post-image { height: 300px; } 
 .cover-post-image { height: 600px; } 

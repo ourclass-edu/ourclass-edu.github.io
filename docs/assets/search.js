@@ -56,6 +56,7 @@ function generateResultElement(ref, titleText, imgRef, content) {
     var title = document.createElement("div");
 
     var body = document.createElement("p");
+    var fadeout = document.createElement("div")
     var link = document.createElement("a");
 
     link.style.textDecoration = "none"
@@ -65,12 +66,13 @@ function generateResultElement(ref, titleText, imgRef, content) {
     title.textContent = titleText;
     title.title = titleText;
     title.className = "grid-post-head"
-
+fadeout.className = "post-list-fade-out"
     body.textContent = content;
 
     link.appendChild(img);
     link.appendChild(title);
     link.appendChild(body);
+    link.appendChild(fadeout)
     card.appendChild(link)
     $('search-results').appendChild(card)
 }

@@ -9,11 +9,17 @@ layout: default
     {% for post in paginator.posts %}
 
     {% if post.featured < 1 %} <li>
-      {% if post.related_image %}
-      <div style="background-image: url({{ post.related_image }});" class="grid-post-image"></div>
-      {% endif %}
-      <a class="grid-post-head" href="{{ post.url }}">{{ post.title }}</a>
-      <p>{{ post.excerpt }}</p>
+      <a href="{{ post.url }}">
+        {% if post.related_image %}
+          <div style="background-image: url({{ post.related_image }});" class="grid-post-image"></div>
+        {% endif %}
+
+        <a class="grid-post-head" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        <p>{{ post.excerpt }}</p>
+
+        <div class="post-list-fade-out"></div>
+        
+      </a>
       </li>
       {% endif %}
       {% endfor %}
