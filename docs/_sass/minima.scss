@@ -64,7 +64,7 @@ h4 {
 
 .cover-post{
   
-  box-shadow: 0px 0px 5px 0px black;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.274);
   border-radius: 5px;
   padding: 20px;
   margin-bottom: 30px;
@@ -77,13 +77,12 @@ h4 {
 }
 
 .grid-post-head {
-
   font-family: "Quicksand", sans-serif;
-  white-space: nowrap;
+//  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   display: block;
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: bold;
 }
 .grid-post-image {
@@ -363,6 +362,12 @@ line-height: 3;
     height: 320px;
     overflow: hidden;
     position: relative;
+    transform: translateY(0px);
+    transition: transform 100ms;
+  }
+  .post-list > li:hover{
+    transform: translateY(-10px);
+    transition: transform 100ms;
   }
   .post-list-fade-out{
     width: 100%;
@@ -379,8 +384,13 @@ line-height: 3;
     height: 420px; 
     position: relative;
     overflow: hidden;
+    
   }
-  .post-list p{
+  .feat-post-list > li:hover{
+    transform: translateY(-10px);
+    transition: transform 100ms;
+  }
+  .post-list p {
     font-size: 14px;
   }
   .feat-post-list p{

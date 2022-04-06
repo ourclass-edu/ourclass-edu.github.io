@@ -21,7 +21,7 @@ layout: default
       <div style="background-image: url({{ post.related_image }});" class="cover-post-image"></div>
       {% endif %}
 
-      <a class="cover-post-head" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+      <span class="cover-post-head">{{ post.title }}</span>
       <p class="cover-post-desc">{{ post.excerpt }}</p>
     </div>
     {%- endif %}
@@ -36,7 +36,7 @@ layout: default
         <div style="background-image: url({{ post.related_image }});" class="feat-post-image"></div>
         {% endif %}
 
-        <a class="grid-post-head" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        <span class="grid-post-head">{{ post.title }}</span>
         <p>{{ post.excerpt }}</p>
         <div class="post-list-fade-out"></div>
       </a>
@@ -56,7 +56,7 @@ layout: default
             <div style="background-image: url({{ post.related_image }});" class="grid-post-image"></div>
           {% endif %}
 
-          <a class="grid-post-head" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+          <span class="grid-post-head">{{ post.title }}</span>
           <p>{{ post.excerpt }}</p>
 
           <div class="post-list-fade-out"></div>
