@@ -384,7 +384,8 @@ line-height: 3;
     height: 420px; 
     position: relative;
     overflow: hidden;
-    
+    transform: translateY(0px);
+    transition: transform 100ms;
   }
   .feat-post-list > li:hover{
     transform: translateY(-10px);
